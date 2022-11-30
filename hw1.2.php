@@ -1,20 +1,28 @@
 <?php
 
-$x = 4;
-$y = 5; 
+$x = 1;
+$y = 2; 
+$element = rand(1,4);
+$e = strrev();
+$result;
 
 
-
-if(rand(1,4) == 1){
-	echo($x + $y);
+if($element == 1){
+	$e = "+";
+	$result = $x + $y;
     
-} else if(rand(1,4) == 2){
-	echo($x - $y); 
-} else if(rand(1,4) == 3){
-	echo($x * $y); 
+} else if($element == 2){
+	$e = "-";
+	$result = $x - $y; 
+} else if($element == 3){
+	$e = "*";
+	$result = $x * $y; 
 }
-	echo($x / $y); 
+else{
+	$e = "/";
+	$result = $x / $y; 
+}
 
-
-
+echo ("$x $e  $y = $result");
 ?>
+
